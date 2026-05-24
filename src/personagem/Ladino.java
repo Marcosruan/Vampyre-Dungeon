@@ -1,9 +1,11 @@
 package personagem;
 
+import inimigos.Inimigo;
+
 public class Ladino extends Personagem {
 
-	public final int vida = 45;
-	public final int dano = 10;
+	public final static int vida = 45;
+	public final static int dano = 10;
 	boolean escondido = false;
 	
 	
@@ -13,8 +15,15 @@ public class Ladino extends Personagem {
 	
 	public void seEsconder() {
 		escondido = true;
-		dano += 10;
 	}
 	
-	
+	@Override
+	public void atacar(Inimigo inimigo){
+		if (escondido) {
+			inimigo.vida -= (dano + 10);
+			escondido = false;
+		} else {
+			inimigo.vida -= dano;			
+		}
+	}
 }
