@@ -2,13 +2,13 @@ package personagem;
 
 public class Ladino extends Personagem {
 
-	public final int vida = 45;
-	public final int dano = 10;
+	public static final int vidaLadino = 45;
+	public static final int danoLadino = 10;
 	boolean escondido = false;
 	
 	
 	public Ladino(String nome) {
-		super(nome, vida, dano);
+		super(nome, vidaLadino, danoLadino);
 	}
 	
 	public void seEsconder() {
