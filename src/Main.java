@@ -6,7 +6,6 @@ public class Main {
 
 		System.out.println("Vida: " + ladino.vida + "\nDano: " + ladino.dano);
 		ladino.seEsconder();
-		ladino.seEsconder();
 		System.out.println("Vida: " + ladino.vida + "\nDano: " + ladino.dano);
 	}
 }
