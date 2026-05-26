@@ -4,13 +4,13 @@ import inimigos.Inimigo;
 
 public class Ladino extends Personagem {
 
-	public final static int vida = 45;
-	public final static int dano = 10;
+	public final static int VIDABASE = 45;
+	public final static int DANOBASE = 10;
 	boolean escondido = false;
 	
 	
 	public Ladino(String nome) {
-		super(nome, vida, dano);
+		super(nome, VIDABASE, DANOBASE);
 	}
 	
 	public void seEsconder() {
