@@ -7,6 +7,12 @@ public class Inimigo {
 	public int vida;
 	public int dano;
 	
+	public Inimigo (String nome, int vida, int dano) {
+		this.nome = nome;
+		this.vida = vida;
+		this.dano = dano;
+	}	
+	
 	public void atacar(Personagem jogador) {
 		jogador.vida -= dano;
 	}
