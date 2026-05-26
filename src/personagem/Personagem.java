@@ -17,7 +17,7 @@ public class Personagem {
 		inimigo.vida -= dano;
 	}
 	
-	public void especial() {
+	public void especial(Inimigo inimigo) {
 		
 	}
 }

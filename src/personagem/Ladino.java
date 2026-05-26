@@ -4,26 +4,35 @@ import inimigos.Inimigo;
 
 public class Ladino extends Personagem {
 
-	public final static int vida = 45;
-	public final static int dano = 10;
+	static final int VIDABASE = 45;
+	static final int DANOBASE = 10;
 	boolean escondido = false;
 	
 	
 	public Ladino(String nome) {
-		super(nome, vida, dano);
+		super(nome, VIDABASE, DANOBASE);
 	}
 	
 	public void seEsconder() {
 		escondido = true;
+		dano += 10;
 	}
 	
 	@Override
 	public void atacar(Inimigo inimigo){
+		inimigo.vida -= dano;
 		if (escondido) {
-			inimigo.vida -= (dano + 10);
 			escondido = false;
-		} else {
-			inimigo.vida -= dano;			
-		}
+			dano -= 10;
+		} 
+	}
+	
+	@Override
+	public void especial(Inimigo inimigo) {
+		inimigo.vida -= dano*2;
+		if (escondido) {
+			escondido = false;
+			dano -= 10;
+		} 
 	}
 }
