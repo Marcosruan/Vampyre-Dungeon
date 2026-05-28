@@ -14,4 +14,9 @@ public class Mago extends Personagem {
 	public void reduzirDanoInimigo(Inimigo inimigo) {
 		inimigo.dano -= 10;
 	}
+	
+	@Override
+	public void especial(Inimigo inimigo) {
+		inimigo.vida -= inimigo.dano;
+	}
 }
