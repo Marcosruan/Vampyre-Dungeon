@@ -5,6 +5,6 @@ public class Esqueleto extends Inimigo{
 	public final static int DANOBASE = 5;
 	
 	public Esqueleto(String nome) {
-		super(nome,VIDABASE,DANOBASE);
+		super(nome, VIDABASE, DANOBASE);
 	}
 }
