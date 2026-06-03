@@ -16,4 +16,8 @@ public class Inimigo {
 	public void atacar(Personagem jogador) {
 		jogador.vida -= dano;
 	}
+
+	public boolean estaVivo() {
+		return vida > 0;
+	}
 }
