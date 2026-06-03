@@ -20,4 +20,7 @@ public class Personagem {
 	public void especial(Inimigo inimigo) {
 		
 	}
+	public boolean estaVivo() {
+		return this.vida > 0;
+	}
 }
