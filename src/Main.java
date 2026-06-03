@@ -9,25 +9,26 @@ public class Main{
         Scanner sc = new Scanner(System.in);
         Historia.introducaoHistoria();
         Personagem heroi = null;
-        String classeSelecionada;
+        int classeSelecionada;
         boolean continuarMenu = true;
 
         do {
             Historia.selecaoPersonagem();
-            classeSelecionada = sc.nextLine();
+            classeSelecionada = sc.nextInt();
+            sc.nextLine();
             System.out.print("Digite o nome do heroi: ");
             String nomeHeroi = sc.nextLine();
 
             switch (classeSelecionada) {
-                case "1":
+                case 1:
                     heroi = new Guerreiro(nomeHeroi);
                     continuarMenu = false;
                     break;
-                case "2":
+                case 2:
                     heroi = new Ladino(nomeHeroi);
                     continuarMenu = false;
                     break;
-                case "3":
+                case 3:
                     heroi = new Mago(nomeHeroi);
                     continuarMenu = false;
                     break;
@@ -39,7 +40,7 @@ public class Main{
 
         Masmorra masmorra = new Masmorra();
 
-        while (heroi.estaVivo() && !masmorra.verificarFinalizaoDaMasmorra()) {
+        while (heroi.estaVivo() && !masmorra.verificarFinalizacaoDaMasmorra()) {
 
             Fase faseAtual = masmorra.faseAtual();
             System.out.println(faseAtual.textoIntroducao());
@@ -74,6 +75,6 @@ public class Main{
             }
         }
 
-        Historia.final(heroi);
+        Historia.finalHistoria(heroi);
     }
 }

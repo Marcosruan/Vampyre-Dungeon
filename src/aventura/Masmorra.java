@@ -6,12 +6,14 @@ public class Masmorra {
 
     public static final Fase[] fases = {
         new Fase(Historia.introducaoFaseI(), new Inimigo[]{ 
-            new Esqueleto("Esqueleto"), 
             new Esqueleto("Esqueleto")
         }),
         new Fase(Historia.introducaoFaseII(), new Inimigo[]{
-            new Zumbi("Zumbi II"),
-            new Zumbi("Zumbi II")
+            new Esqueleto(),
+            new Zumbi("Zumbi"),
+        }),
+        new Fase(Historia.introducaoFaseIII(), new Inimigo[]{
+                new Vampiro()
         })
     };
 
