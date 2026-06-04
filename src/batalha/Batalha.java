@@ -16,7 +16,11 @@ public class Batalha {
         }
 
         if (inimigo.estaVivo() && heroi.estaVivo()) {
-            inimigo.atacar(heroi);
-        }
+        	if(inimigo.analisarAtivarcaoEspecial()) {
+        		inimigo.especial(heroi);
+        	} else {
+    			inimigo.atacar(heroi);
+        	}
+    	}
     }
 }
