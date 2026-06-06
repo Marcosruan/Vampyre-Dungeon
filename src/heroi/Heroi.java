@@ -18,6 +18,7 @@ public class Heroi {
 	}
 	
 	public void atacar(Inimigo inimigo) {
+		System.out.println(dano);
 		inimigo.vida -= dano;
 		incrementarContadorEspecial();
 	}

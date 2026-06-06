@@ -16,7 +16,7 @@ public class Batalha {
         }
 
         if (inimigo.estaVivo() && heroi.estaVivo()) {
-        	if(inimigo.analisarAtivarcaoEspecial()) {
+        	if(inimigo.analisarAtivarAcaoEspecial()) {
         		inimigo.especial(heroi);
         	} else {
     			inimigo.atacar(heroi);

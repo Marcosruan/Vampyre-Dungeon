@@ -33,7 +33,7 @@ public class Inimigo {
 			contadorEspecial++;
 		}
 	}
-	public boolean analisarAtivarcaoEspecial() {
+	public boolean analisarAtivarAcaoEspecial() {
 		if(contadorEspecial < 2) {
 			return false;
 		}

@@ -4,7 +4,7 @@ import inimigos.Inimigo;
 
 public class Ladino extends Heroi {
 
-	static final int VIDABASE = 55;
+	static final int VIDABASE = 75;
 	static final int DANOBASE = 20;
 	boolean escondido = false;
 	

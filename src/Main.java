@@ -170,9 +170,10 @@ public class Main {
         }
 
         if (heroi.estaVivo()) {
-            System.out.printf("\nO %s foi derrotado",inimigoAtual.nome);
+            System.out.printf("\nO %s foi derrotado\n",inimigoAtual.nome);
         } else {
             System.out.printf("\n%s teve um fim trágico durante sua jornada.\n", heroi.nome);
         }
+        ExibeBarras.exibeBarraVida(heroi, vidaMaximaHeroi, inimigoAtual, vidaMaximaInimigo);
     }
 }

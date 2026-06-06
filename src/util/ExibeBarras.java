@@ -36,10 +36,10 @@ public class ExibeBarras {
 		String cor = corDoEstadoAtual(barrasCheias);
 		
 		if (vilao) {
-			return cor + vidaAtual + "/" + vidaMaxima + " [ " + "░".repeat(barrasVazias) + "█".repeat(barrasCheias) + " ] HP" + ANSI_RESET;
+			return cor + vidaChecada + "/" + vidaMaxima + " [ " + "░".repeat(barrasVazias) + "█".repeat(barrasCheias) + " ] HP" + ANSI_RESET;
 		}
 		
-		return cor + "HP [ " + "█".repeat(barrasCheias) + "░".repeat(barrasVazias) + " ] " + vidaAtual + "/" + vidaMaxima + ANSI_RESET;
+		return cor + "HP [ " + "█".repeat(barrasCheias) + "░".repeat(barrasVazias) + " ] " + vidaChecada + "/" + vidaMaxima + ANSI_RESET;
 	}
 	
 	private static String corDoEstadoAtual(int quantidade) {
