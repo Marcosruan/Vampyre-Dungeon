@@ -5,7 +5,7 @@ import inimigos.Inimigo;
 public class Mago extends Heroi {
 	
 	static final int VIDABASE = 60;
-	static final int DANOBASE = 15;
+	static final int DANOBASE = 20;
 	
 	public Mago(String nome) {
 		super(nome, VIDABASE, DANOBASE,VIDABASE);
@@ -13,7 +13,7 @@ public class Mago extends Heroi {
 	
 	@Override
 	public void especial(Inimigo inimigo) {
-		inimigo.vida -= (inimigo.dano + dano);
+		inimigo.vida -= inimigo.dano;
 		vida += inimigo.dano;
 		resetarContador();
 	}
