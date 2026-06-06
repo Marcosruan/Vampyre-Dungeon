@@ -1,6 +1,6 @@
 package inimigos;
 
-import personagem.Personagem;
+import heroi.Heroi;
 
 public class Inimigo {
 	public String nome;
@@ -16,7 +16,7 @@ public class Inimigo {
 		this.contadorEspecial = 0;
 	}
 	
-	public void atacar(Personagem jogador) {
+	public void atacar(Heroi jogador) {
 		jogador.vida -= dano;
 	}
 
@@ -24,7 +24,7 @@ public class Inimigo {
 		return vida > 0;
 	}
 	
-	public void especial(Personagem jogador) {
+	public void especial(Heroi jogador) {
 		resetarContador();
 	}
 	

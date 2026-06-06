@@ -1,6 +1,7 @@
 import batalha.*;
+import heroi.*;
 import inimigos.*;
-import personagem.*;
+import util.ExibeBarras;
 import aventura.*;
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         Historia.introducaoHistoria();
-        Personagem heroi = null;
+        Heroi heroi = null;
         int classeSelecionada;
         boolean continuarMenu = true;
 
@@ -46,7 +47,7 @@ public class Main {
         Historia.finalHistoria(heroi);
     }
     
-    public static void iniciarAventuraPelaMasmorra(Masmorra masmorra,Personagem heroi) {
+    public static void iniciarAventuraPelaMasmorra(Masmorra masmorra,Heroi heroi) {
 
         while (heroi.estaVivo()) { 
             Fase faseAtual = masmorra.faseAtual();
@@ -141,12 +142,13 @@ public class Main {
         }
     }
 
-    public static void turnoBatalha(Fase faseAtual, Personagem heroi) {
+    public static void turnoBatalha(Fase faseAtual, Heroi heroi) {
         Inimigo inimigoAtual = faseAtual.inimigoDaFase;
+        int vidaMaximaHeroi = heroi.vida;
+        int vidaMaximaInimigo = inimigoAtual.vida;
 
         while (heroi.estaVivo() && inimigoAtual.estaVivo()) {
-            System.out.printf("\n--- Turno do Herói [%s - Vida: %d] vs %s [Vida: %d] ---\n", 
-                    heroi.nome, heroi.vida, inimigoAtual.nome, inimigoAtual.vida);
+        	ExibeBarras.exibeBarraVida(heroi, vidaMaximaHeroi, inimigoAtual, vidaMaximaInimigo);
             System.out.println("1 - Atacar");
             System.out.println("2 - Especial");
             System.out.print("Escolha sua ação: ");

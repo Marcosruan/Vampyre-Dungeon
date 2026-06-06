@@ -1,6 +1,6 @@
 package inimigos;
 
-import personagem.Personagem;
+import heroi.Heroi;
 
 public class Vampiro extends Inimigo {
 	
@@ -12,12 +12,12 @@ public class Vampiro extends Inimigo {
 		super(TITULO, VIDABASE, DANOBASE);
 	}
 	@Override
-	public void atacar(Personagem jogador) {
+	public void atacar(Heroi jogador) {
 		super.atacar(jogador);
 		incrementarContadorEspecial();
 	}
 	@Override
-	public void especial(Personagem jogador) {
+	public void especial(Heroi jogador) {
 		super.especial(jogador);
 		int vidaOriginalDoJogador = jogador.vida;
 		jogador.vida -= 20;

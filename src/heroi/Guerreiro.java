@@ -1,7 +1,7 @@
-package personagem;
+package heroi;
 import inimigos.*;
 
-public class Guerreiro extends Personagem{
+public class Guerreiro extends Heroi{
 	static final int VIDABASE = 60;
 	static final int DANOBASE = 10;
 

@@ -1,10 +1,10 @@
 package batalha;
-import personagem.*;
+import heroi.*;
 import inimigos.*;
 
 public class Batalha {
 
-    public static void iniciaBatalha(Personagem heroi, Inimigo inimigo, int opcaoEscolhida) {
+    public static void iniciaBatalha(Heroi heroi, Inimigo inimigo, int opcaoEscolhida) {
 
         switch (opcaoEscolhida) {
             case 1:
