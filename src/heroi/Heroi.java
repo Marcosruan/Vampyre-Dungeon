@@ -23,16 +23,15 @@ public class Heroi {
 	}
 	
 	public void especial(Inimigo inimigo) {
-		resetarContador();
-	
 	}
+	
 	public boolean estaVivo() {
 		return this.vida > 0;
 	}
 	public void regenerarVida() {
 		vida = capacidadeMaxima; 
 	}
-	public void aumentarOfensiva() {
+	public void aumentarDanoDeAtaque() {
 		dano += 15;
 	}
 	public void incrementarContadorEspecial() {
