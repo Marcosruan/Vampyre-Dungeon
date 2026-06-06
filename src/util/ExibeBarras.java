@@ -25,6 +25,12 @@ public class ExibeBarras {
 		System.out.printf("%s => %s%40s%s <= %s\n", nomeHeroiComCor, barraVidaHeroi, " ", barraVidaVilao, nomeVilaoComCor);
 	}
 	
+	public static void exibeContadorEspecial(int contador) {
+		int quantMaxima = 2;
+		String barras = "[ " + "▰".repeat(contador) + "▱".repeat(quantMaxima - contador) + " ] ";
+		System.out.printf("%s%s%s\n\n", ANSI_CYAN, barras, ANSI_RESET);
+	}
+	
 	private static String geraBarraVida(int vidaAtual, int vidaMaxima, boolean vilao) {
 		final int quantTotalBarras = 20;
 		

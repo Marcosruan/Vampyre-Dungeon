@@ -149,6 +149,7 @@ public class Main {
 
         while (heroi.estaVivo() && inimigoAtual.estaVivo()) {
         	ExibeBarras.exibeBarraVida(heroi, vidaMaximaHeroi, inimigoAtual, vidaMaximaInimigo);
+        	ExibeBarras.exibeContadorEspecial(heroi.contadorEspecial);
             System.out.println("1 - Atacar");
             System.out.println("2 - Especial");
             System.out.print("Escolha sua ação: ");
