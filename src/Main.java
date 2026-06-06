@@ -1,4 +1,3 @@
-import batalha.*;
 import heroi.*;
 import inimigos.*;
 import util.ExibeBarras;
@@ -129,7 +128,7 @@ public class Main {
                         scanner.nextLine(); 
                             
                         if (opcao <= 0 || opcao > quantidadeCaminhos) {
-                            System.out.println("Opção inválida.Tente de novo.");                    		
+                            System.out.println("Opção inválida. Tente de novo.");                    		
                         	continue;
                         }
                         masmorra.avancarNaFase(faseAtual.proximasFases[opcao - 1]);

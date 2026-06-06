@@ -1,4 +1,4 @@
-package batalha;
+package aventura;
 import heroi.*;
 import inimigos.*;
 
