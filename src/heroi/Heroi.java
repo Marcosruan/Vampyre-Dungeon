@@ -1,15 +1,15 @@
-package personagem;
+package heroi;
 
 import inimigos.Inimigo;
 
-public class Personagem {
+public class Heroi {
 	public String nome;
 	public int vida;
 	public int dano;
 	public int capacidadeMaxima;
 	public int contadorEspecial;
 	
-	public Personagem(String nome, int vida, int dano,int capacidadeMaxima) {
+	public Heroi(String nome, int vida, int dano,int capacidadeMaxima) {
 		this.nome = nome;
 		this.dano = dano;
 		this.vida = vida;

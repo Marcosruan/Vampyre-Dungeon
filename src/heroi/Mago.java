@@ -1,8 +1,8 @@
-package personagem;
+package heroi;
 
 import inimigos.Inimigo;
 
-public class Mago extends Personagem {
+public class Mago extends Heroi {
 	
 	static final int VIDABASE = 40;
 	static final int DANOBASE = 15;

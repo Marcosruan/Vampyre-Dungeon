@@ -1,5 +1,5 @@
 package aventura;
-import personagem.*;
+import heroi.*;
 
 public class Historia {
 	public static void introducaoHistoria() {
@@ -16,7 +16,7 @@ public class Historia {
 				""");
 	}
 	
-	public static void finalHistoria(Personagem heroi) {
+	public static void finalHistoria(Heroi heroi) {
 		if(heroi.estaVivo()) {
 			System.out.println("Heroi finaliza masmorra");
 		} else {
