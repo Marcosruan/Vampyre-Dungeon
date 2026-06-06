@@ -6,21 +6,48 @@ public class Personagem {
 	public String nome;
 	public int vida;
 	public int dano;
+	public int capacidadeMaxima;
+	public int contadorEspecial;
 	
-	public Personagem(String nome, int vida, int dano) {
+	public Personagem(String nome, int vida, int dano,int capacidadeMaxima) {
 		this.nome = nome;
 		this.dano = dano;
 		this.vida = vida;
+		this.capacidadeMaxima = capacidadeMaxima;
+		this.contadorEspecial = 0;
 	}
 	
 	public void atacar(Inimigo inimigo) {
 		inimigo.vida -= dano;
+		incrementarContadorEspecial();
 	}
 	
 	public void especial(Inimigo inimigo) {
-		
+		resetarContador();
+	
 	}
 	public boolean estaVivo() {
 		return this.vida > 0;
 	}
+	public void regenerarVida() {
+		vida = capacidadeMaxima; 
+	}
+	public void aumentarOfensiva() {
+		dano += 15;
+	}
+	public void incrementarContadorEspecial() {
+		if(contadorEspecial < 2) {
+			contadorEspecial++;
+		}
+	}
+	public boolean analisarAtivarcaoEspecial() {
+		if(contadorEspecial < 2) {
+			return false;
+		}
+		return true;
+	}
+	public void resetarContador() {
+		contadorEspecial = 0;
+	}	
+	
 }

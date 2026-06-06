@@ -18,24 +18,36 @@ public class Historia {
 	
 	public static void finalHistoria(Personagem heroi) {
 		if(heroi.estaVivo()) {
-			
+			System.out.println("Heroi finaliza masmorra");
 		} else {
-			
+			System.out.println("Masmorra colapsa e sem inguém para impedir seu avanço o mundo se corrompe.");
 		}
 	}
 
 	public static String introducaoFaseI() {
-		// TODO Auto-generated method stub
 		return null;
 	}
-
 	public static String introducaoFaseII() {
-		// TODO Auto-generated method stub
+		return null;
+	}
+	public static String introducaoFaseII_I() {
+		return null;
+	}
+	public static String introducaoFaseII_II() {
+		return null;
+	}
+	public static String introducaoFaseII_III() {
+		return null;
+	}
+	public static String introducaoFaseIII() {
+		return "O que é, o que é? Tem mais ou menos um palmo, tem um buraco na ponta e um pouco de cabelo no pé, quem tem usa, quem não tem usa o dedo.\nResposta: ";
+
+	}
+	public static String introducaoFaseIV() {
+		return null;
+	}
+	public static String introducaoFaseV() {
 		return null;
 	}
 
-	public static String introducaoFaseIII() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }	
