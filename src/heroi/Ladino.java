@@ -26,9 +26,9 @@ public class Ladino extends Heroi {
 	
 	@Override
 	public void especial(Inimigo inimigo) {
-		super.especial(inimigo);
 		inimigo.resetarContador();
 		escondido = true;
 		inimigo.vida -= dano;
+		resetarContador();
 	}
 }

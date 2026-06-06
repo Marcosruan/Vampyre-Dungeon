@@ -13,7 +13,7 @@ public class Mago extends Heroi {
 	
 	@Override
 	public void especial(Inimigo inimigo) {
-		super.especial(inimigo);
 		inimigo.vida -= inimigo.dano;
+		resetarContador();
 	}
 }

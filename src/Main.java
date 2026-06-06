@@ -60,7 +60,7 @@ public class Main {
                     if (resposta.equalsIgnoreCase("agulha")) {
                         System.out.println("\nResposta correta!");
                         heroi.regenerarVida();
-                        heroi.aumentarOfensiva();
+                        heroi.aumentarDanoDeAtaque();
                         heroi.incrementarContadorEspecial();
                     } else {
                         System.out.println("\nResposta errada! Você não ganha nenhum bônus.");
@@ -72,7 +72,7 @@ public class Main {
                 		int opcao;
                 		do {
 	                		System.out.println("""
-	                				Parabéns heroi vc conseguiu uma recompensa por ter derrotado o monstro.Escolha sabiamente uma opção:
+	                				Parabéns heroi vc conseguiu uma recompensa por ter derrotado o monstro. Escolha sabiamente uma opção:
 	                				1 - Regenerar vida
 	                				2 - Aumentar dano
 	                				3 - Incrementar o acumulador do ataque especial
@@ -85,7 +85,7 @@ public class Main {
 		                            heroi.regenerarVida();
 		                            break;
 		                		case 2:
-		                			heroi.aumentarOfensiva();
+		                			heroi.aumentarDanoDeAtaque();
 		                			break;
 		                		case 3:
 		                            heroi.incrementarContadorEspecial();

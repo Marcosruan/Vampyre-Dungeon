@@ -24,8 +24,8 @@ public class Inimigo {
 		return vida > 0;
 	}
 	
-	public void especial(Heroi jogador) {
-		resetarContador();
+	public void especial(Heroi heroi) {
+		
 	}
 	
 	public void incrementarContadorEspecial() {

@@ -5,7 +5,7 @@ import heroi.Heroi;
 public class Vampiro extends Inimigo {
 	
 	static final int VIDABASE = 70;
-	static final int DANOBASE = 30;
+	static final int DANOBASE = 20;
 	static final String TITULO = "Mestre Vampiro";
 	
 	public Vampiro() {
@@ -16,14 +16,14 @@ public class Vampiro extends Inimigo {
 		super.atacar(jogador);
 		incrementarContadorEspecial();
 	}
-	@Override
+	
 	public void especial(Heroi jogador) {
-		super.especial(jogador);
 		int vidaOriginalDoJogador = jogador.vida;
 		jogador.vida -= 20;
 		
 		if(vidaOriginalDoJogador > jogador.vida) {
 			vida += 20;
 		}
+		resetarContador();
 	}
 }

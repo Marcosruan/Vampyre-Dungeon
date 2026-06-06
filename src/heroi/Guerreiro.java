@@ -10,7 +10,7 @@ public class Guerreiro extends Heroi{
 	}
 	@Override
 	public void especial(Inimigo inimigo) {
-		super.especial(inimigo);
-		dano+= (int) inimigo.dano/2;
+		dano+= inimigo.dano/2;
+		resetarContador();
 	}
 }
