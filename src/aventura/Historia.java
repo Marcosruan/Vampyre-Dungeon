@@ -2,6 +2,7 @@ package aventura;
 import heroi.*;
 
 public class Historia {
+	
 	public static void introducaoHistoria() {
 		System.out.println("Em uma noite escura, criaturas distorcidas observam, pelas frestas da masmorra, um ser acordando no meio da vegetação rasteira. Este ser retoma sua consciência, entretanto, ele perdeu completamente suas memórias do passado e seu senso de identidade. Ele está confuso e observa relutantemente seus arredores. Não reconhece estas paredes de concreto, mas entende seu propósito aqui. Um conhecimento resguardado no seu subconsciente. Ele precisa derrotar o vampiro que controla esta masmorra!");
 	}
@@ -27,27 +28,18 @@ public class Historia {
 	public static String introducaoFaseI() {
 		return null;
 	}
-	public static String introducaoFaseII() {
+	
+	public static String introducaoFaseII_A() {
 		return null;
 	}
-	public static String introducaoFaseII_I() {
+	public static String introducaoFaseII_B() {
 		return null;
 	}
-	public static String introducaoFaseII_II() {
-		return null;
-	}
-	public static String introducaoFaseII_III() {
-		return null;
-	}
+	
 	public static String introducaoFaseIII() {
-		return "O que é, o que é? Tem mais ou menos um palmo, tem um buraco na ponta e um pouco de cabelo no pé, quem tem usa, quem não tem usa o dedo.\nResposta: ";
-
+		return null;
 	}
 	public static String introducaoFaseIV() {
 		return null;
 	}
-	public static String introducaoFaseV() {
-		return null;
-	}
-
 }	

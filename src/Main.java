@@ -54,9 +54,9 @@ public class Main {
 
             if (faseAtual.verificarFaseEspecial()) {
                 
-                if (faseAtual.nomeFase.equals("Enigma do Palindromo")) {
+                if (faseAtual.nomeFase.equals("Enigma")) {
                     String resposta = scanner.nextLine();
-                    if (resposta.equalsIgnoreCase("agulha")) {
+                    if (faseAtual.enigma.respostaCerta(resposta)) {
                         System.out.println("\nResposta correta!");
                         heroi.regenerarVida();
                         heroi.aumentarDanoDeAtaque();
@@ -119,7 +119,7 @@ public class Main {
                     int opcao;
                     int quantidadeCaminhos = faseAtual.proximasFases.length;
                     do {
-                    	System.out.println("\nEscolha qual caminho deseja seguir:");
+                    	System.out.println("\nEscolha qual caminho deseja seguir: ");
                         for (int i = 0; i < quantidadeCaminhos; i++) {
                             System.out.printf("%d - %s\n" ,(i+1),faseAtual.proximasFases[i].nomeFase);
                         }

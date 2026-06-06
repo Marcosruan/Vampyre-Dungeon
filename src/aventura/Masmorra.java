@@ -1,19 +1,25 @@
 package aventura;
+import java.util.Random;
+
 import inimigos.*;
 
 public class Masmorra {
     public Fase[] fases;
     Fase faseAtual;
     boolean fim = false;
+    public Enigma[] enigmas;
     
     public Masmorra() {
+    	inicializarArrayDeEnigmas();
+    	int indice = escolherEnigmaAleatorio();
+    	
     	this.fases = new Fase[]{
     		new Fase("Fase 1",Historia.introducaoFaseI(),new Esqueleto("Esqueleto Guerreiro")),
-    		new Fase("Fase II.1",Historia.introducaoFaseII_I(),new Esqueleto()),
-    		new Fase("Fase II.2",Historia.introducaoFaseII_II(),new Zumbi("Zumbi")),
-    		new Fase("Enigma do Palindromo",Historia.introducaoFaseIII()),
-    		new Fase("NPC com Buffer",Historia.introducaoFaseIV()),
-    		new Fase("Fase Boss",Historia.introducaoFaseV(),new Vampiro())
+    		new Fase("Fase II.1",Historia.introducaoFaseII_A(),new Esqueleto()),
+    		new Fase("Fase II.2",Historia.introducaoFaseII_B(),new Zumbi("Zumbi")),
+    		new Fase("Enigma", enigmas[indice]),
+    		new Fase("NPC com Buffs",Historia.introducaoFaseIII()),
+    		new Fase("Fase Boss",Historia.introducaoFaseIV(),new Vampiro())
     	};
     	fases[0].adicionarProximasFases(fases[1],fases[2],fases[3]);
     	fases[1].adicionarProximasFases(fases[4]);
@@ -27,7 +33,34 @@ public class Masmorra {
     }
     
 
-    public boolean verificarFinalizacaoDaMasmorra(){
+    private int escolherEnigmaAleatorio() {
+    	Random gerador = new Random();
+		return gerador.nextInt(5);
+	}
+
+
+	private void inicializarArrayDeEnigmas() {
+		enigmas = new Enigma[5];
+		
+		enigmas[0] = new Enigma(
+				"Eu falo, mas não tenho boca. Eu ouço, mas não tenho ouvidos. Não tenho corpo, mas vivo com o vento. O que eu sou?",
+				"eco");
+		enigmas[1] = new Enigma(
+				"Quanto mais você tira de mim, maior eu fico. O que eu sou?",
+				"buraco");
+		enigmas[2] = new Enigma(
+				"Sou cheio de furos, mas ainda assim consigo reter muita água. O que eu sou?",
+				"esponja");
+		enigmas[3] = new Enigma(
+				"O que é que anda com os pés na cabeça?",
+				"piolho");
+		enigmas[4] = new Enigma(
+				"Se você me tem, quer me compartilhar. Se você me compartilha, você não me tem mais. O que eu sou?",
+				"segredo");
+	}
+
+
+	public boolean verificarFinalizacaoDaMasmorra(){
     	return fim;
     }
 
