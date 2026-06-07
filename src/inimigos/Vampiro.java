@@ -1,23 +1,35 @@
 package inimigos;
 
-import personagem.Personagem;
+import heroi.Heroi;
 
 public class Vampiro extends Inimigo {
 	
-	static final int VIDABASE = 100;
-	static final int DANOBASE = 40;
+	static final int VIDABASE = 85;
+	static final int DANOBASE = 20;
 	static final String TITULO = "Mestre Vampiro";
 	
 	public Vampiro() {
 		super(TITULO, VIDABASE, DANOBASE);
 	}
+	@Override
+	public void atacar(Heroi jogador) {
+		super.atacar(jogador);
+		incrementarContadorEspecial();
+	}
 	
-	public void drenarVida(Personagem jogador) {
-		int vidaOriginalDoJogador = jogador.vida;
-		jogador.vida -= 20;
-		
-		if(vidaOriginalDoJogador > jogador.vida) {
-			vida += 20;
-		}
+	public void especial(Heroi jogador) {
+		jogador.vida -= dano;
+		vida += dano;
+		resetarContador();
+	}
+	
+	@Override
+	public String efeitoAtaque() {
+		return "O inimigo usou o ataque Rajada de Sangue!";
+	}
+	
+	@Override
+	public String efeitoEspecial() {
+		return "O inimigo usou o especial Drenagem Vital, roubando a vida do jogador!";
 	}
 }
