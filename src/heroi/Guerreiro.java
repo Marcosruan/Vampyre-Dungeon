@@ -21,6 +21,11 @@ public class Guerreiro extends Heroi{
 	
 	@Override
 	public String efeitoEspecial() {
-		return "O herói usou o especial Fortalecer e aumentou sua quantidade de ataque!";
+		return "\nO herói usou o especial Fortalecer e aumentou sua quantidade de ataque!";
+	}
+	
+	@Override
+	public String toString() {
+		return "Vida: " + VIDABASE + " | Dano de Ataque: " + DANOBASE + " | Especial: fortalece o seu ataque usando como base a metade do dano do inimigo.";
 	}
 }

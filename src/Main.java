@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
+    static int vidaMaximaHeroi;
 
     public static void main(String[] args) {
         Historia.introducaoHistoria();
@@ -17,7 +18,7 @@ public class Main {
             Historia.selecaoPersonagem();
             classeSelecionada = scanner.nextInt();
             scanner.nextLine();
-            System.out.print("Digite o nome do heroi: ");
+            System.out.print("\nDigite o nome do heroi: ");
             String nomeHeroi = scanner.nextLine();
 
             switch (classeSelecionada) {
@@ -40,7 +41,8 @@ public class Main {
         } while (continuarMenu);
         
         System.out.println(heroi);
-
+        vidaMaximaHeroi = heroi.vida;
+        
         Masmorra masmorra = new Masmorra();
 
         iniciarAventuraPelaMasmorra(masmorra, heroi);
@@ -114,10 +116,7 @@ public class Main {
                     int opcao;
                     int quantidadeCaminhos = faseAtual.proximasFases.length;
                     do {
-                    	System.out.println("\nEscolha qual caminho deseja seguir: ");
-                        for (int i = 0; i < quantidadeCaminhos; i++) {
-                            System.out.printf("%d - %s\n" ,(i+1),faseAtual.proximasFases[i].nomeFase);
-                        }
+                    	System.out.println(Historia.introduzirCaminhos());
                         System.out.print("Faça sua escolha: ");
                         opcao = scanner.nextInt();
                         scanner.nextLine(); 
@@ -138,7 +137,6 @@ public class Main {
 
     public static void turnoBatalha(Fase faseAtual, Heroi heroi) {
         Inimigo inimigoAtual = faseAtual.inimigoDaFase;
-        int vidaMaximaHeroi = heroi.vida;
         int vidaMaximaInimigo = inimigoAtual.vida;
         
         System.out.println(inimigoAtual);

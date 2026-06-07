@@ -43,19 +43,19 @@ public class Masmorra {
 		enigmas = new Enigma[5];
 		
 		enigmas[0] = new Enigma(
-				"Eu falo, mas não tenho boca. Eu ouço, mas não tenho ouvidos. Não tenho corpo, mas vivo com o vento. O que eu sou?",
+				"\nEu falo, mas não tenho boca. Eu ouço, mas não tenho ouvidos. Não tenho corpo, mas vivo com o vento. O que eu sou?",
 				"eco");
 		enigmas[1] = new Enigma(
-				"Quanto mais você tira de mim, maior eu fico. O que eu sou?",
+				"\nQuanto mais você tira de mim, maior eu fico. O que eu sou?",
 				"buraco");
 		enigmas[2] = new Enigma(
-				"Sou cheio de furos, mas ainda assim consigo reter muita água. O que eu sou?",
+				"\nSou cheio de furos, mas ainda assim consigo reter muita água. O que eu sou?",
 				"esponja");
 		enigmas[3] = new Enigma(
-				"O que é que anda com os pés na cabeça?",
+				"\nO que é que anda com os pés na cabeça?",
 				"piolho");
 		enigmas[4] = new Enigma(
-				"Se você me tem, quer me compartilhar. Se você me compartilha, você não me tem mais. O que eu sou?",
+				"\nSe você me tem, quer me compartilhar. Se você me compartilha, você não me tem mais. O que eu sou?",
 				"segredo");
 	}
 

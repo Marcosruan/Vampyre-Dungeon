@@ -27,4 +27,9 @@ public class Mago extends Heroi {
 	public String efeitoEspecial() {
 		return "\nO herói usou o especial Convergência e refletiu o dano do seu inimigo!";
 	}
+	
+	@Override
+	public String toString() {
+		return "Vida: " + VIDABASE + " | Dano de Ataque: " + DANOBASE + " | Especial: Reflete o dano do inimigo.";
+	}
 }

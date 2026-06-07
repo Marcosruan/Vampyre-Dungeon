@@ -32,4 +32,9 @@ public class Vampiro extends Inimigo {
 	public String efeitoEspecial() {
 		return "O inimigo usou o especial Drenagem Vital, roubando a vida do jogador!";
 	}
+	
+	@Override
+	public String toString() {
+		return "Nome: " + TITULO + " | Vida: " + VIDABASE + " | Dano de Ataque: " + DANOBASE + " | Especial: Afere dano e rouba vida do herói.";
+	}
 }

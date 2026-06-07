@@ -44,4 +44,9 @@ public class Ladino extends Heroi {
 	public String efeitoEspecial() {
 		return "\nO herói usou o especial Furtividade e causou dano ao seu inimigo!";
 	}
+	
+	@Override
+	public String toString() {
+		return "Vida: " + VIDABASE + " | Dano de Ataque: " + DANOBASE + " | Especial: Ativa o modo furtivo e dá o dobro de dano no próximo ataque.";
+	}
 }
