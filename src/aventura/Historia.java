@@ -42,14 +42,26 @@ public class Historia {
 	}
 
 	public static String introducaoFaseI() {
-		return null;
+		return """
+				\nO herói ultrapassa a entrada da masmorra e adentra a escuridão do local. 
+				Após entrar na sala, no meio das trevas, revela-se a figura de um esqueleto pronto para atacá-lo.
+				""";
 	}
 	
 	public static String introducaoFaseII_A() {
-		return null;
+		return """
+				\nAo seguir pelo caminho à esquerda, o desbravador da masmorra se depara 
+				com mais um desafio: um novo esqueleto, desta vez com uma aparência fortificada 
+				e muito mais ameaçadora.
+				""";
 	}
 	public static String introducaoFaseII_B() {
-		return null;
+		return """				
+				\nAo seguir pelo caminho à direita, o desbravador da masmorra 
+				encontra mais um desafio. Em meio à escuridão da sala, revela-se 
+				a figura de um zumbi em decomposição, que avança lentamente 
+				em sua direção, pronto para atacá-lo.
+				""";
 	}
 	
 	public static String introducaoFaseIII() {
@@ -62,7 +74,12 @@ public class Historia {
 				""";
 	}
 	public static String introducaoFaseIV() {
-		return null;
+		return """
+				Ao atravessar os grandes portões da última sala, o herói finalmente 
+				encontra o maior desafio da masmorra. Em meio às sombras, 
+				surge um vampiro de olhar ameaçador e presença imponente. Seu poder é claramente 
+				superior ao dos inimigos enfrentados anteriormente. Chegou a hora da batalha final.
+				""";
 	}
 	
 	public static String introduzirCaminhos() {
