@@ -30,7 +30,7 @@ public class Historia {
 		if(heroi.estaVivo()) {
 			textoFinalizacao = "🏆 VITÓRIA!";
 			int quantidadeEspacos = (tamanhoLinha - textoFinalizacao.length())/2;
-			System.out.println("Heroi finaliza masmorra");
+			System.out.println("Heroi finaliza masmorra.");
 			System.out.println(" ".repeat(quantidadeEspacos)+textoFinalizacao);
 		} else {
 			textoFinalizacao = "🪦 GAME OVER";
@@ -75,7 +75,7 @@ public class Historia {
 	}
 	public static String introducaoFaseIV() {
 		return """
-				Ao atravessar os grandes portões da última sala, o herói finalmente 
+				\nAo atravessar os grandes portões da última sala, o herói finalmente 
 				encontra o maior desafio da masmorra. Em meio às sombras, 
 				surge um vampiro de olhar ameaçador e presença imponente. Seu poder é claramente 
 				superior ao dos inimigos enfrentados anteriormente. Chegou a hora da batalha final.
