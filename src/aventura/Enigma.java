@@ -1,7 +1,7 @@
 package aventura;
 
 public class Enigma {
-	String pergunta;
+	public String pergunta;
 	String resposta;
 	
 	public Enigma(String pergunta, String resposta) {

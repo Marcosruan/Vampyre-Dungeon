@@ -14,12 +14,12 @@ public class Masmorra {
     	int indice = escolherEnigmaAleatorio();
     	
     	this.fases = new Fase[]{
-    		new Fase("Fase 1",Historia.introducaoFaseI(),new Esqueleto("Esqueleto Guerreiro")),
-    		new Fase("Fase II.1",Historia.introducaoFaseII_A(),new Esqueleto()),
-    		new Fase("Fase II.2",Historia.introducaoFaseII_B(),new Zumbi("Zumbi")),
-    		new Fase("Enigma", enigmas[indice]),
-    		new Fase("NPC com Buffs",Historia.introducaoFaseIII()),
-    		new Fase("Fase Boss",Historia.introducaoFaseIV(),new Vampiro())
+    		new Fase("Fase 1", Historia.introducaoFaseI(), new Esqueleto("Esqueleto Guerreiro")),
+    		new Fase("Fase II.1", Historia.introducaoFaseII_A(), new Esqueleto()),
+    		new Fase("Fase II.2", Historia.introducaoFaseII_B(), new Zumbi("Zumbi")),
+    		new Fase("Enigma", Historia.introduzirEnigma(), enigmas[indice]),
+    		new Fase("NPC com Buffs", Historia.introducaoFaseIII()),
+    		new Fase("Fase Boss", Historia.introducaoFaseIV(), new Vampiro())
     	};
     	fases[0].adicionarProximasFases(fases[1],fases[2],fases[3]);
     	fases[1].adicionarProximasFases(fases[4]);
@@ -43,19 +43,19 @@ public class Masmorra {
 		enigmas = new Enigma[5];
 		
 		enigmas[0] = new Enigma(
-				"\nEu falo, mas não tenho boca. Eu ouço, mas não tenho ouvidos. Não tenho corpo, mas vivo com o vento. O que eu sou?",
+				"Eu falo, mas não tenho boca. Eu ouço, mas não tenho ouvidos. Não tenho corpo, mas vivo com o vento. O que eu sou?",
 				"eco");
 		enigmas[1] = new Enigma(
-				"\nQuanto mais você tira de mim, maior eu fico. O que eu sou?",
+				"Quanto mais você tira de mim, maior eu fico. O que eu sou?",
 				"buraco");
 		enigmas[2] = new Enigma(
-				"\nSou cheio de furos, mas ainda assim consigo reter muita água. O que eu sou?",
+				"Sou cheio de furos, mas ainda assim consigo reter muita água. O que eu sou?",
 				"esponja");
 		enigmas[3] = new Enigma(
-				"\nO que é que anda com os pés na cabeça?",
+				"O que é que anda com os pés na cabeça?",
 				"piolho");
 		enigmas[4] = new Enigma(
-				"\nSe você me tem, quer me compartilhar. Se você me compartilha, você não me tem mais. O que eu sou?",
+				"Se você me tem, quer me compartilhar. Se você me compartilha, você não me tem mais. O que eu sou?",
 				"segredo");
 	}
 

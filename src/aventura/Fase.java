@@ -9,7 +9,7 @@ public class Fase {
     public Fase[] proximasFases;
     public Enigma enigma;
 
-    public Fase(String nomeFase,String introducao, Inimigo inimigoDaFase) {
+    public Fase(String nomeFase, String introducao, Inimigo inimigoDaFase) {
     	this.nomeFase = nomeFase;
     	this.introducao = introducao;
         this.inimigoDaFase = inimigoDaFase;
@@ -17,16 +17,16 @@ public class Fase {
         this.proximasFases = new Fase[0];
     }
     
-    public Fase(String nomeFase, Enigma enigma) {
+    public Fase(String nomeFase, String introducao, Enigma enigma) {
     	this.nomeFase = nomeFase;
     	this.inimigoDaFase = null;
     	this.especial = true;
     	this.proximasFases = new Fase[0];
     	this.enigma = enigma;
-    	this.introducao = enigma.pergunta;
+    	this.introducao = introducao;
     }
     
-    public Fase(String nomeFase,String introducao) {
+    public Fase(String nomeFase, String introducao) {
     	this.nomeFase = nomeFase;
     	this.introducao = introducao;
     	this.inimigoDaFase = null;

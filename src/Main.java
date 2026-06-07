@@ -59,6 +59,7 @@ public class Main {
             if (faseAtual.verificarFaseEspecial()) {
                 
                 if (faseAtual.nomeFase.equals("Enigma")) {
+                	System.out.println(faseAtual.enigma.pergunta);
                     String resposta = scanner.nextLine();
                     if (faseAtual.enigma.respostaCerta(resposta)) {
                         System.out.println("\nResposta correta!");
