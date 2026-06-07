@@ -47,6 +47,6 @@ public class Ladino extends Heroi {
 	
 	@Override
 	public String toString() {
-		return "Vida: " + VIDABASE + " | Dano de Ataque: " + DANOBASE + " | Especial: Ativa o modo furtivo e dá o dobro de dano no próximo ataque.";
+		return "Classe: Ladino 🥷 | ❤️ Vida: " + VIDABASE + " | ⚔️ Dano de Ataque: " + DANOBASE + " | ✨ Especial: Ativa o modo furtivo e dá o dobro de dano no próximo ataque.";
 	}
 }

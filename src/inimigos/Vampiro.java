@@ -35,6 +35,6 @@ public class Vampiro extends Inimigo {
 	
 	@Override
 	public String toString() {
-		return "Nome: " + TITULO + " | Vida: " + VIDABASE + " | Dano de Ataque: " + DANOBASE + " | Especial: Afere dano e rouba vida do herói.";
+		return "Monstro: " + TITULO + " 🧛 | ❤️ Vida: " + VIDABASE + " | ⚔️ Dano de Ataque: " + DANOBASE + " | ✨ Especial: Afere dano e rouba vida do herói.";
 	}
 }

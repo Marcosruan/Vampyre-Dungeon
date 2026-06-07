@@ -12,4 +12,8 @@ public class Zumbi extends Inimigo{
 	public String efeitoAtaque() {
 		return "O inimigo usou o ataque Mordida Voraz!";
 	}
+	@Override
+	public String toString() {
+		return "Monstro: " + nome + " 🧟 | ❤️ Vida: " + vida + " | ⚔️ Dano de Ataque: " + dano;
+	}
 }

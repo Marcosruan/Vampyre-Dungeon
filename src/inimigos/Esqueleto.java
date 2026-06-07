@@ -18,4 +18,8 @@ public class Esqueleto extends Inimigo{
 	public String efeitoAtaque() {
 		return "O inimigo usou o ataque Aremesso de Osso!";
 	}
+	@Override
+	public String toString() {
+		return "Monstro: " + nome + " 💀 | ❤️ Vida: " + vida + " | ⚔️ Dano de Ataque: " + dano;
+	}
 }

@@ -51,7 +51,4 @@ public class Inimigo {
 		return "";
 	}
 	
-	public String toString() {
-		return "Nome: " + nome + " | Vida: " + vida + " | Dano de Ataque: " + dano;
-	}
 }

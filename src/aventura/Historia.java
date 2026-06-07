@@ -24,11 +24,21 @@ public class Historia {
 	}
 	
 	public static void finalHistoria(Heroi heroi) {
+		int tamanhoLinha = 140;
+		String textoFinalizacao;
+		System.out.println("=".repeat(tamanhoLinha));
 		if(heroi.estaVivo()) {
+			textoFinalizacao = "🏆 VITÓRIA!";
+			int quantidadeEspacos = (tamanhoLinha - textoFinalizacao.length())/2;
 			System.out.println("Heroi finaliza masmorra");
+			System.out.println(" ".repeat(quantidadeEspacos)+textoFinalizacao);
 		} else {
+			textoFinalizacao = "🪦 GAME OVER";
+			int quantidadeEspacos = (tamanhoLinha - textoFinalizacao.length())/2;
 			System.out.println("Masmorra colapsa e sem ninguém para impedir seu avanço o mundo se corrompe.");
+			System.out.println(" ".repeat(quantidadeEspacos)+textoFinalizacao);
 		}
+		System.out.println("=".repeat(tamanhoLinha));
 	}
 
 	public static String introducaoFaseI() {

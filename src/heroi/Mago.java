@@ -30,6 +30,6 @@ public class Mago extends Heroi {
 	
 	@Override
 	public String toString() {
-		return "Vida: " + VIDABASE + " | Dano de Ataque: " + DANOBASE + " | Especial: Reflete o dano do inimigo.";
+		return "Classe: Mago 🧙 | ❤️ Vida: " + VIDABASE + " | ⚔️ Dano de Ataque: " + DANOBASE + " | ✨ Especial: Reflete o dano do inimigo.";
 	}
 }

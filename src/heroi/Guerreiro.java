@@ -26,6 +26,6 @@ public class Guerreiro extends Heroi{
 	
 	@Override
 	public String toString() {
-		return "Vida: " + VIDABASE + " | Dano de Ataque: " + DANOBASE + " | Especial: fortalece o seu ataque usando como base a metade do dano do inimigo.";
+		return "Classe: Guerreiro 🤺 | Vida: " + VIDABASE + " | ⚔️ Dano de Ataque: " + DANOBASE + " | ✨ Especial: fortalece o seu ataque usando como base a metade do dano do inimigo.";
 	}
 }
