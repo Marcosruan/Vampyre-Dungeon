@@ -138,7 +138,7 @@ public class Main {
 
     public static void turnoBatalha(Fase faseAtual, Heroi heroi) {
         Inimigo inimigoAtual = faseAtual.inimigoDaFase;
-        int vidaMaximaHeroi = heroi.vida;
+        int vidaMaximaHeroi = heroi.capacidadeMaxima;
         int vidaMaximaInimigo = inimigoAtual.vida;
         
         System.out.println(inimigoAtual);
