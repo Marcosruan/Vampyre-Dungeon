@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
-    static int vidaMaximaHeroi;
 
     public static void main(String[] args) {
         Historia.introducaoHistoria();
@@ -41,7 +40,6 @@ public class Main {
         } while (continuarMenu);
         
         System.out.println(heroi);
-        vidaMaximaHeroi = heroi.vida;
         
         Masmorra masmorra = new Masmorra();
 

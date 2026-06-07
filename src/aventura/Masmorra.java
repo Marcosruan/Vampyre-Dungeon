@@ -33,13 +33,13 @@ public class Masmorra {
     }
     
 
-    private int escolherEnigmaAleatorio() {
+    public int escolherEnigmaAleatorio() {
     	Random gerador = new Random();
 		return gerador.nextInt(5);
 	}
 
 
-	private void inicializarArrayDeEnigmas() {
+	public void inicializarArrayDeEnigmas() {
 		enigmas = new Enigma[5];
 		
 		enigmas[0] = new Enigma(
