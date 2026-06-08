@@ -17,6 +17,12 @@ public class Main {
             Historia.selecaoPersonagem();
             classeSelecionada = scanner.nextInt();
             scanner.nextLine();
+            
+            if(classeSelecionada < 1 || classeSelecionada > 3) {
+                System.out.println("Classe inválida. Tente novamente!");
+                continue;
+            }
+            
             System.out.print("\nDigite o nome do heroi: ");
             String nomeHeroi = scanner.nextLine();
 
@@ -33,13 +39,10 @@ public class Main {
                     heroi = new Ladino(nomeHeroi);
                     continuarMenu = false;
                     break;
-                default:
-                    System.out.println("Classe inválida. Tente novamente!");
-                    break;
             }
         } while (continuarMenu);
         
-        System.out.println(heroi);
+        exibirCriacaoHeroi(heroi);
         
         Masmorra masmorra = new Masmorra();
 
@@ -170,5 +173,13 @@ public class Main {
         } else {
             System.out.printf("\n%s teve um fim trágico durante sua jornada.\n", heroi.nome);
         }
+    }
+    public static void exibirCriacaoHeroi(Heroi heroi) {
+    	int tamanhoLinha = 140;
+    	String textoHeroiCriado = " HEROI CRIADO ";
+    	int valorCentral = (tamanhoLinha - textoHeroiCriado.length()) / 2;
+    	System.out.println("\n"+"=".repeat(valorCentral)+textoHeroiCriado+"=".repeat(valorCentral));
+    	System.out.println(heroi);
+    	System.out.println("=".repeat(tamanhoLinha)+"\n");
     }
 }
