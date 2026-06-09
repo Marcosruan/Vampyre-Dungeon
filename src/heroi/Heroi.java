@@ -7,19 +7,19 @@ public class Heroi {
 	public int vida;
 	public int dano;
 	public int capacidadeMaxima;
-	public int contadorEspecial;
+	public int energia;
 	
 	public Heroi(String nome, int vida, int dano,int capacidadeMaxima) {
 		this.nome = nome;
 		this.dano = dano;
 		this.vida = vida;
 		this.capacidadeMaxima = capacidadeMaxima;
-		this.contadorEspecial = 0;
+		this.energia = 0;
 	}
 	
 	public void atacar(Inimigo inimigo) {
 		inimigo.vida -= dano;
-		incrementarContadorEspecial();
+		incrementarEnergia();
 	}
 	
 	public void especial(Inimigo inimigo) {
@@ -34,26 +34,26 @@ public class Heroi {
 	public void aumentarDanoDeAtaque() {
 		dano += 15;
 	}
-	public void incrementarContadorEspecial() {
-		if(contadorEspecial < 2) {
-			contadorEspecial++;
+	public void incrementarEnergia() {
+		if(energia < 2) {
+			energia++;
 		}
 	}
-	public boolean analisarAtivarcaoEspecial() {
-		if(contadorEspecial < 2) {
+	public boolean energiaSuficiente() {
+		if(energia < 2) {
 			return false;
 		}
 		return true;
 	}
-	public void resetarContador() {
-		contadorEspecial = 0;
+	public void resetarEnergia() {
+		energia = 0;
 	}	
 	
-	public String efeitoAtaque() {
+	public String ataqueLog() {
 		return "";
 	}
 	
-	public String efeitoEspecial() {
+	public String especialLog() {
 		return "";
 	}
 }

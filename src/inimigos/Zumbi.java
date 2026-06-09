@@ -9,7 +9,7 @@ public class Zumbi extends Inimigo{
 	}
 	
 	@Override
-	public String efeitoAtaque() {
+	public String ataqueLog() {
 		return "O inimigo usou o ataque Mordida Voraz!";
 	}
 	@Override

@@ -22,7 +22,7 @@ public class ExibeBarras {
 		System.out.printf("%s => %s%30s%s <= %s\n", nomeHeroiComCor, barraVidaHeroi, " ", barraVidaVilao, nomeVilaoComCor);
 	}
 	
-	public static void exibeContadorEspecial(int contador) {
+	public static void exibeEnergia(int contador) {
 		int quantMaxima = 2;
 		String barras = "[ " + "▰".repeat(contador) + "▱".repeat(quantMaxima - contador) + " ] ";
 		System.out.printf("%s%s%s\n", ANSI_CYAN, barras, ANSI_RESET);

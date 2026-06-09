@@ -10,14 +10,14 @@ public class Masmorra {
     public Enigma[] enigmas;
     
     public Masmorra() {
-    	inicializarArrayDeEnigmas();
+    	inicializarVetorDeEnigmas();
     	int indice = escolherEnigmaAleatorio();
     	
     	this.fases = new Fase[]{
     		new Fase("Fase 1", Historia.introducaoFaseI(), new Esqueleto("Esqueleto Guerreiro")),
     		new Fase("Fase II.1", Historia.introducaoFaseII_A(), new Esqueleto()),
     		new Fase("Fase II.2", Historia.introducaoFaseII_B(), new Zumbi("Zumbi")),
-    		new Fase("Enigma", Historia.introduzirEnigma(), enigmas[indice]),
+    		new Fase("Enigma", Historia.introducaoEnigma(), enigmas[indice]),
     		new Fase("NPC com Buffs", Historia.introducaoFaseIII()),
     		new Fase("Fase Boss", Historia.introducaoFaseIV(), new Vampiro())
     	};
@@ -33,13 +33,13 @@ public class Masmorra {
     }
     
 
-    public int escolherEnigmaAleatorio() {
+    int escolherEnigmaAleatorio() {
     	Random gerador = new Random();
 		return gerador.nextInt(5);
 	}
 
 
-	public void inicializarArrayDeEnigmas() {
+	void inicializarVetorDeEnigmas() {
 		enigmas = new Enigma[5];
 		
 		enigmas[0] = new Enigma(
@@ -60,7 +60,7 @@ public class Masmorra {
 	}
 
 
-	public boolean verificarFinalizacaoDaMasmorra(){
+	public boolean fimDaMasmorra(){
     	return fim;
     }
 

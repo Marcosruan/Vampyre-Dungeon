@@ -14,7 +14,7 @@ public class Vampiro extends Inimigo {
 	@Override
 	public void atacar(Heroi jogador) {
 		super.atacar(jogador);
-		incrementarContadorEspecial();
+		incrementarEnergia();
 	}
 	
 	public void especial(Heroi jogador) {
@@ -24,12 +24,12 @@ public class Vampiro extends Inimigo {
 	}
 	
 	@Override
-	public String efeitoAtaque() {
+	public String ataqueLog() {
 		return "O inimigo usou o ataque Rajada de Sangue!";
 	}
 	
 	@Override
-	public String efeitoEspecial() {
+	public String especialLog() {
 		return "O inimigo usou o especial Drenagem Vital, roubando a vida do jogador!";
 	}
 	

@@ -8,21 +8,21 @@ public class Batalha {
 
         switch (opcaoEscolhida) {
             case 1:
-            	System.out.println(heroi.efeitoAtaque());
+            	System.out.println(heroi.ataqueLog());
                 heroi.atacar(inimigo);
                 break;
             case 2:
-            	System.out.println(heroi.efeitoEspecial());
+            	System.out.println(heroi.especialLog());
                 heroi.especial(inimigo);
                 break;
         }
 
         if (inimigo.estaVivo() && heroi.estaVivo()) {
-        	if(inimigo.analisarAtivarAcaoEspecial()) {
-        		System.out.println(inimigo.efeitoEspecial());
+        	if(inimigo.energiaSuficiente()) {
+        		System.out.println(inimigo.especialLog());
         		inimigo.especial(heroi);
         	} else {
-        		System.out.println(inimigo.efeitoAtaque());
+        		System.out.println(inimigo.ataqueLog());
     			inimigo.atacar(heroi);
         	}
     	}

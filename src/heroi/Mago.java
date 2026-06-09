@@ -15,16 +15,16 @@ public class Mago extends Heroi {
 	public void especial(Inimigo inimigo) {
 		inimigo.vida -= inimigo.dano;
 		vida += inimigo.dano;
-		resetarContador();
+		resetarEnergia();
 	}
 	
 	@Override
-	public String efeitoAtaque() {
+	public String ataqueLog() {
 		return "\nO herói usou o ataque Energia Arcana!";
 	}
 	
 	@Override
-	public String efeitoEspecial() {
+	public String especialLog() {
 		return "\nO herói usou o especial Convergência e refletiu o dano do seu inimigo!";
 	}
 	

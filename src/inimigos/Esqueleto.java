@@ -15,7 +15,7 @@ public class Esqueleto extends Inimigo{
 	}
 	
 	@Override
-	public String efeitoAtaque() {
+	public String ataqueLog() {
 		return "O inimigo usou o ataque Aremesso de Osso!";
 	}
 	@Override

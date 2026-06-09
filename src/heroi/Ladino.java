@@ -15,7 +15,7 @@ public class Ladino extends Heroi {
 	
 	@Override
 	public void atacar(Inimigo inimigo){
-		super.incrementarContadorEspecial();
+		incrementarEnergia();
 		if (escondido) {
 			escondido = false;
 			inimigo.vida -= dano * 2;
@@ -28,11 +28,11 @@ public class Ladino extends Heroi {
 	public void especial(Inimigo inimigo) {
 		escondido = true;
 		inimigo.vida -= dano;
-		resetarContador();
+		resetarEnergia();
 	}
 	
 	@Override
-	public String efeitoAtaque() {
+	public String ataqueLog() {
 		if(escondido) {
 			return "\nO herói está camuflado e usou o ataque Corte Preciso, deferindo um ataque em dobro!";
 		} else {
@@ -41,7 +41,7 @@ public class Ladino extends Heroi {
 	}
 	
 	@Override
-	public String efeitoEspecial() {
+	public String especialLog() {
 		return "\nO herói usou o especial Furtividade e causou dano ao seu inimigo!";
 	}
 	

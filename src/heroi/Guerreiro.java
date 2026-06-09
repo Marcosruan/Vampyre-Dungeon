@@ -11,16 +11,16 @@ public class Guerreiro extends Heroi{
 	@Override
 	public void especial(Inimigo inimigo) {
 		dano+= inimigo.dano/2 + 2;
-		resetarContador();
+		resetarEnergia();
 	}
 	
 	@Override
-	public String efeitoAtaque() {
+	public String ataqueLog() {
 		return "\nO herói usou o ataque Lâmina Flamejante!";
 	}
 	
 	@Override
-	public String efeitoEspecial() {
+	public String especialLog() {
 		return "\nO herói usou o especial Fortalecer e aumentou seu dano de ataque!";
 	}
 	

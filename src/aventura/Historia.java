@@ -69,7 +69,7 @@ public class Historia {
 				\nParabéns herói, você conseguiu uma recompensa por ter derrotado o monstro. Escolha sabiamente uma opção:
 				1 - Regenerar vida
 				2 - Aumentar dano
-				3 - Incrementar o acumulador do ataque especial
+				3 - Incrementar energia
 				Faça a sua escolha:
 				""";
 	}
@@ -82,11 +82,11 @@ public class Historia {
 				""";
 	}
 	
-	public static String introduzirCaminhos() {
+	public static String introducaoCaminhos() {
 		return "\nO herói se depara com 3 caminhos distintos: \n1 - Ir pela esquerda \n2 - Ir pela direita \n3 - Seguir em frente.";
 	}
 	
-	public static String introduzirEnigma() {
+	public static String introducaoEnigma() {
 		return """				
 				\nAo atravessar a porta, o herói se depara com uma sala misteriosa 
 				que contém um altar com uma mensagem escrita sobre ele. A mensagem diz: 
