@@ -15,7 +15,7 @@ public class Main {
 
         do {
             Historia.selecaoPersonagem();
-            classeSelecionada = scanner.nextInt();
+            classeSelecionada = lerInteiro();
             scanner.nextLine();
             
             if(classeSelecionada < 1 || classeSelecionada > 3) {
@@ -76,7 +76,7 @@ public class Main {
                 	if(heroi.estaVivo()) {
                 		int opcao;
                 		do {
-	                		opcao = scanner.nextInt();
+	                		opcao = lerInteiro();
 	                		scanner.nextLine();
 	                		switch(opcao) {
 		                		case 1:
@@ -120,7 +120,7 @@ public class Main {
                     do {
                     	System.out.println(Historia.introduzirCaminhos());
                         System.out.print("Faça sua escolha: ");
-                        opcao = scanner.nextInt();
+                        opcao = lerInteiro();
                         scanner.nextLine(); 
                             
                         if (opcao <= 0 || opcao > quantidadeCaminhos) {
@@ -151,7 +151,7 @@ public class Main {
             System.out.println("2 - Especial");
             System.out.print("Escolha sua ação: ");
 
-            int opcao = scanner.nextInt();
+            int opcao = lerInteiro();
             scanner.nextLine(); 
 
             if (opcao < 1 || opcao > 2) {
@@ -181,5 +181,14 @@ public class Main {
     	System.out.println("\n"+"=".repeat(valorCentral)+textoHeroiCriado+"=".repeat(valorCentral));
     	System.out.println(heroi);
     	System.out.println("=".repeat(tamanhoLinha)+"\n");
+    }
+    
+    public static int lerInteiro() {
+    	while (!scanner.hasNextInt()) {
+            System.out.println("Isso não é um número válido!");
+            System.out.print("Tente novamente: ");
+            scanner.next();
+        }
+    	return scanner.nextInt();
     }
 }
